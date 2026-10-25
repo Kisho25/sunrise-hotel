@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Solara is a fictional Mediterranean retreat created as a university web design project.">
+    <title>Sunrise Hotel</title>
+    <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="hero" id="home">
+        <nav class="site-nav" aria-label="Main navigation">
+            <a class="brand brand-header" href="#home" aria-label="Sunrise Hotel home">
+                <img class="brand-logo" src="assets/images/sunrise-logo.png" alt="">
+            </a>
+
+            <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Open navigation menu">
+            <label class="nav-toggle-label" for="nav-toggle" aria-hidden="true">
+                <span></span><span></span>
+            </label>
+
+            <div class="nav-links">
+                <a href="#story">Our story</a>
+                <a href="#stay">Stay</a>
+                <a href="#experiences">Experiences</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <a class="nav-book" href="#booking">Reserve</a>
+        </nav>
+
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+            <h1>A slower rhythm<br><em>by the sea.</em></h1>
+            <p class="hero-copy">An intimate coastal retreat shaped by light, stone and the quiet beauty of the Mediterranean.</p>
+            <a class="text-link text-link-light" href="#story">Discover Sunrise <span aria-hidden="true">↘</span></a>
+        </div>
+
+        <a class="scroll-cue" href="#booking" aria-label="Scroll to booking">
+            <span>Scroll to explore</span>
+            <i aria-hidden="true"></i>
+        </a>
+    </header>
+
+    <main id="main-content">
+        <section class="introduction section-pad" id="story" aria-labelledby="story-title">
+            <div class="intro-main">
+                <h2 id="story-title">The coast, kept<br><em>beautifully simple.</em></h2>
+                <div class="intro-copy">
+                    <p>Carved into a sun-warmed hillside, Sunrise is a fictional boutique retreat where every room opens toward the horizon. Days begin with salt air and end beneath olive trees.</p>
+                    <p>Natural materials, local flavours and unhurried rituals create a stay that feels both elemental and quietly extraordinary.</p>
+                </div>
+                <div class="intro-facts" aria-label="Hotel highlights">
+                    <div><strong>42</strong><span>Sea-facing rooms</span></div>
+                    <div><strong>03</strong><span>Distinctive restaurants</span></div>
+                    <div><strong>01</strong><span>Private cove</span></div>
+                </div>
+            </div>
+
+            <aside class="booking-card" id="booking" aria-labelledby="booking-title">
+                <div class="booking-heading">
+                    <div>
+                        <p class="eyebrow">Plan your escape</p>
+                        <h2 id="booking-title">Your stay at Sunrise</h2>
+                    </div>
+                </div>
+
+                <form class="booking-form" action="#stay" method="get">
+                    <label>
+                        <span>Arrival</span>
+                        <input type="date" name="arrival" aria-label="Arrival date" required>
+                    </label>
+                    <label>
+                        <span>Departure</span>
+                        <input type="date" name="departure" aria-label="Departure date" required>
+                    </label>
+                    <label>
+                        <span>Guests</span>
+                        <select name="guests" aria-label="Number of guests">
+                            <option>2 Guests</option>
+                            <option>1 Guest</option>
+                            <option>3 Guests</option>
+                            <option>4 Guests</option>
+                        </select>
+                    </label>
+                    <button type="submit">Check availability <span aria-hidden="true">→</span></button>
+                </form>
+            </aside>
+        </section>
+
+        <section class="stay section-pad" id="stay">
+            <div class="stay-image-wrap">
+                <img src="assets/images/Room.png" alt="Warm, light-filled suite overlooking the Mediterranean Sea">
+                <p class="image-note">Suites</p>
+            </div>
+
+            <div class="stay-content">
+                <p class="eyebrow">Rooms &amp; suites</p>
+                <h2>Wake up with<br>the horizon.</h2>
+                <p class="lead">Calm, tactile interiors frame uninterrupted views of sea and sky. Each space is made for long mornings and barefoot evenings.</p>
+
+                <div class="room-feature">
+                    <div>
+                        <h3>Suites</h3>
+                        <p>Floor-to-ceiling sea views, a private terrace and a deep stone bath.</p>
+                    </div>
+                </div>
+
+                <details>
+                    <summary>Every stay includes <span aria-hidden="true">+</span></summary>
+                    <ul>
+                        <li>Daily Mediterranean breakfast</li>
+                        <li>Private cove and wellness access</li>
+                        <li>Sunset aperitif on arrival</li>
+                    </ul>
+                </details>
+
+                <a class="button button-dark" href="#rooms">Explore accommodation <span aria-hidden="true">→</span></a>
+            </div>
+        </section>
+
+        <section class="room-list section-pad" id="rooms" aria-labelledby="rooms-heading">
+
+            <div class="room-grid">
+                <article class="room-card room-card-featured">
+                    <div class="room-card-top"></div>
+                    <div>
+                        <h3>Rooms</h3>
+                        <a href="#booking">View room <span aria-hidden="true">↗</span></a>
+                    </div>
+                </article>
+                <article class="room-card" style="background: url('assets/images/Room.png') center / cover no-repeat;">
+                    <div class="room-card-top"></div>
+                    <div style="color:white;">
+                        <h3>Horizon Suites</h3>
+                        <a href="#booking">View suite <span aria-hidden="true">↗</span></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="experiences section-pad" id="experiences">
+            <div class="experiences-heading">
+                <p class="eyebrow eyebrow-light">Beyond your room</p>
+                <h2>Follow the light,<br><em>find your ritual.</em></h2>
+            </div>
+
+            <div class="experience-grid">
+                <article class="experience-card experience-card-dining">
+                    <img src="assets/images/Food.png" alt="Candlelit Mediterranean dining terrace overlooking the coast">
+                    <div class="experience-card-copy">
+                        <h3>From the coast,<br>to your table.</h3>
+                        <p>Simple ingredients, open-fire cooking and a terrace made for lingering.</p>
+                        <a href="#contact">Discover dining <span aria-hidden="true">→</span></a>
+                    </div>
+                </article>
+
+                <article class="experience-card experience-card-spa">
+                    <img src="assets/images/Spagirl.jpeg" alt="Natural stone spa with a soaking pool overlooking the sea">
+                    <div class="experience-card-copy">
+                        <h3>Return to<br>your senses.</h3>
+                        <p>Sea minerals, aromatic herbs and treatments guided by the rhythm of the day.</p>
+                        <a href="#contact">Explore the spa <span aria-hidden="true">→</span></a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="micro-experiences">
+                <div><h3>Hidden coves</h3><p>Private sails and quiet swims along the island's untouched edge.</p></div>
+                <div><h3>Slow mornings</h3><p>Guided walks through old olive groves before the coast wakes.</p></div>
+                <div><h3>Golden hours</h3><p>Aperitifs, vinyl and the last light from our cliffside terrace.</p></div>
+            </div>
+        </section>
+
+        <section class="pause section-pad" aria-label="Sunrise philosophy">
+            <div class="pause-orbit" aria-hidden="true"><span></span></div>
+            <blockquote>“Luxury is not more.<br>It is <em>space, light</em> and time.”</blockquote>
+            <p>The Sunrise Philosophy</p>
+        </section>
+
+        <section class="place" aria-labelledby="place-heading">
+            <img src="assets/images/Drink.png" alt="Bartender pouring a cocktail">
+            <div class="place-panel">
+                <p class="eyebrow eyebrow-light">The island</p>
+                <h2 id="place-heading">Close to everything.<br>Far from ordinary.</h2>
+                <p>Set above a quiet Aegean cove, Sunrise is twenty minutes from the old harbour and a world away from the noise.</p>
+                <a class="text-link text-link-light" href="#contact">Find your way here <span aria-hidden="true">→</span></a>
+            </div>
+        </section>
+
+        <section class="contact section-pad" id="contact">
+            <div class="contact-intro">
+                <p class="eyebrow">Begin your journey</p>
+                <h2>Meet us<br><em>by the sea.</em></h2>
+            </div>
+            <div class="contact-actions">
+                <p>Questions, special requests, or simply dreaming? Our fictional reservations team would be happy to help.</p>
+                <a class="button button-dark" href="mailto:elhachemyouri@gmail.com">elhachemyouri@gmail.com <span aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-top">
+            <a class="brand brand-footer" href="#home">
+                <span class="brand-name">Sunrise</span>
+                <span class="brand-tagline">Mediterranean Retreat</span>
+            </a>
+            <div class="newsletter">
+                <p>Letters from the coast</p>
+                <form action="#contact" method="get">
+                    <label class="sr-only" for="email">Email address</label>
+                    <input id="email" type="email" name="email" placeholder="Your email address" required>
+                    <button type="submit" aria-label="Subscribe">→</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <div><span>Explore</span><a href="#story">Our story</a><a href="#stay">Rooms &amp; suites</a><a href="#experiences">Experiences</a></div>
+            <div><span>Visit</span><a href="#place-heading">Location</a><a href="#contact">Contact</a><a href="#booking">Reservations</a></div>
+            <div><span>Social</span><a href="#contact">Instagram</a><a href="#contact">Pinterest</a><a href="#contact">LinkedIn</a></div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Sunrise. University project concept.</p>
+            <p>Designed with HTML &amp; CSS only.</p>
+            <a href="#home">Back to top ↑</a>
+        </div>
+    </footer>
+</body>
+</html>
