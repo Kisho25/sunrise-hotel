@@ -1441,7 +1441,8 @@ footer {
 
     .hero {
         min-height: 780px;
-        background-position: 65% center;
+        /* Keep the hotel's full rooftop logo inside narrow phone viewports. */
+        background-position: right center;
     }
 
     .site-nav {
