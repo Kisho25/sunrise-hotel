@@ -5,9 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Solara is a fictional Mediterranean retreat created as a university web design project.">
     <title>Sunrise Hotel</title>
-    <link rel="stylesheet" href="homepage.css?v=3">
+    <script>document.documentElement.classList.add("js");</script>
+    <link rel="stylesheet" href="homepage.css?v=4">
 </head>
 <body>
+    <div class="page-loader" id="page-loader" role="status" aria-label="Loading Sunrise Hotel">
+        <img src="assets/images/iconnobg.png" alt="">
+    </div>
+    <script>
+        (function () {
+            const loader = document.querySelector("#page-loader");
+            document.body.classList.add("is-loading");
+
+            window.setTimeout(function () {
+                loader.classList.add("is-hidden");
+                loader.setAttribute("aria-hidden", "true");
+                document.body.classList.remove("is-loading");
+
+                window.setTimeout(function () {
+                    loader.remove();
+                }, 400);
+            }, 2000);
+        }());
+    </script>
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <header class="hero" id="home">

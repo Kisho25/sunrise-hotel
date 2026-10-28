@@ -95,6 +95,44 @@ a {
     border: 0;
 }
 
+body.is-loading {
+    overflow: hidden;
+}
+
+.page-loader {
+    display: none;
+}
+
+.js .page-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: grid;
+    place-items: center;
+    background: #fff;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 350ms ease, visibility 350ms ease;
+}
+
+.js .page-loader.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.page-loader img {
+    width: clamp(92px, 18vw, 132px);
+    height: auto;
+    animation: loader-spin 1.15s linear infinite;
+}
+
+@keyframes loader-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .section-pad {
     padding: 150px max(24px, calc((100vw - 1440px) / 2));
 }
@@ -2110,6 +2148,10 @@ footer {
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
+    }
+
+    .page-loader img {
+        animation: none;
     }
 
     *,
