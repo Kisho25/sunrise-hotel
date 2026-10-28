@@ -1605,10 +1605,6 @@ footer {
         --page: min(100% - 36px, 1440px);
     }
 
-    body {
-        background: #fff;
-    }
-
     .section-pad {
         padding: 95px 24px;
     }
@@ -1676,8 +1672,7 @@ footer {
         align-items: flex-start;
         justify-content: center;
         gap: 24px;
-        background: #fff;
-        color: #000;
+        background: var(--deep);
         opacity: 0;
         visibility: hidden;
         transform: translateY(-16px);
@@ -1698,10 +1693,6 @@ footer {
 
     .nav-toggle:checked~.nav-toggle-label span:last-child {
         transform: translateY(-4px) rotate(-45deg);
-    }
-
-    .nav-toggle:checked~.nav-toggle-label span {
-        background: #000;
     }
 
     .nav-toggle:checked~.nav-links {
@@ -1726,21 +1717,6 @@ footer {
     .booking-card {
         width: 100%;
         padding: 40px 24px;
-        background: #fff;
-        color: #000;
-    }
-
-    .booking-card .eyebrow,
-    .booking-card h2,
-    .booking-card label span,
-    .booking-card input,
-    .booking-card select,
-    .booking-card .booking-message {
-        color: #000;
-    }
-
-    .booking-form input[type="date"]::-webkit-calendar-picker-indicator {
-        filter: none;
     }
 
     .booking-card .booking-form {
@@ -1756,29 +1732,9 @@ footer {
         min-height: 58px;
     }
 
-    .booking-card .booking-form button,
-    .booking-card .booking-form button:hover,
-    .booking-card .booking-form button:focus-visible,
-    .availability-cta,
-    .availability-cta:hover,
-    .availability-cta:focus-visible,
-    .button-dark,
-    .button-dark:hover,
-    .button-dark:focus-visible {
-        background: #c4af57;
-        color: #fff;
-    }
-
     .availability-results {
         padding-top: 90px;
         padding-bottom: 95px;
-        background: #fff;
-        color: #000;
-    }
-
-    .availability-results .eyebrow,
-    .availability-results .availability-note {
-        color: #000;
     }
 
     .availability-heading {
@@ -1798,7 +1754,6 @@ footer {
 
     .availability-card {
         max-width: 580px;
-        background: #fff;
     }
 
     .introduction {
@@ -1829,19 +1784,6 @@ footer {
     .stay {
         grid-template-columns: 1fr;
         gap: 65px;
-        background: #fff;
-        color: #000;
-    }
-
-    .stay .eyebrow,
-    .stay-content h2,
-    .stay-content .lead,
-    .room-feature h3,
-    .room-feature p,
-    .stay summary,
-    .stay summary span,
-    .stay details ul {
-        color: #000;
     }
 
     .stay-image-wrap {
@@ -1860,22 +1802,6 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .experiences {
-        background: #fff;
-        color: #000;
-    }
-
-    .experiences .eyebrow,
-    .experiences-heading h2 {
-        color: #000;
-    }
-
-    .experience-card-copy,
-    .experience-card-copy p,
-    .experience-card-copy a {
-        color: #fff;
-    }
-
     .experience-card-dining,
     .experience-card-spa {
         min-height: 620px;
@@ -1889,60 +1815,11 @@ footer {
     .micro-experiences>div {
         min-height: 220px;
         padding: 30px 24px 34px;
-        border-color: rgba(0, 0, 0, 0.2);
-        background: #fff;
-        color: #000;
-        box-shadow: none;
-    }
-
-    .micro-experiences>div:hover,
-    .micro-experiences>div:focus-within {
-        border-color: rgba(196, 175, 87, 0.78);
-        background: #fff;
-    }
-
-    .micro-experiences p {
-        color: #000;
     }
 
     .contact {
         grid-template-columns: 1fr;
         align-items: start;
-    }
-
-    .contact .eyebrow {
-        color: #000;
-    }
-
-    footer {
-        background: #fff;
-        color: #000;
-    }
-
-    .brand-footer-logo {
-        filter: brightness(0);
-    }
-
-    .footer-top,
-    .footer-bottom {
-        border-color: rgba(0, 0, 0, 0.18);
-    }
-
-    .newsletter>p,
-    .newsletter input,
-    .newsletter input::placeholder,
-    .newsletter button,
-    .footer-links span,
-    .footer-links a,
-    .footer-links a:hover,
-    .footer-links a:focus-visible,
-    .footer-bottom,
-    .footer-bottom a {
-        color: #000;
-    }
-
-    .newsletter form {
-        border-color: rgba(0, 0, 0, 0.45);
     }
 
     .footer-links {
