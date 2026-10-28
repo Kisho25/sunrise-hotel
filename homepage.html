@@ -13,7 +13,7 @@
     <header class="hero" id="home">
         <nav class="site-nav" aria-label="Main navigation">
             <a class="brand brand-header" href="#home" aria-label="Sunrise Hotel home">
-                <img class="brand-logo" src="assets/images/sunrise-logo.png" alt="">
+                <img class="brand-logo" src="assets/images/logo-nobg.png" alt="">
             </a>
 
             <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Open navigation menu">
@@ -53,9 +53,9 @@
                     <p>Natural materials, local flavours and unhurried rituals create a stay that feels both elemental and quietly extraordinary.</p>
                 </div>
                 <div class="intro-facts" aria-label="Hotel highlights">
-                    <div><strong>42</strong><span>Sea-facing rooms</span></div>
-                    <div><strong>03</strong><span>Distinctive restaurants</span></div>
-                    <div><strong>01</strong><span>Private cove</span></div>
+                    <div><img class="intro-fact-icon" src="assets/images/iconnobg.png" alt=""><span>Sea-facing rooms</span></div>
+                    <div><img class="intro-fact-icon" src="assets/images/iconnobg.png" alt=""><span>Distinctive restaurants</span></div>
+                    <div><img class="intro-fact-icon" src="assets/images/iconnobg.png" alt=""><span>Private cove</span></div>
                 </div>
             </div>
 
@@ -67,33 +67,46 @@
                     </div>
                 </div>
 
-                <form class="booking-form" action="#stay" method="get">
+                <form class="booking-form" id="availability-form" novalidate>
                     <label>
                         <span>Arrival</span>
-                        <input type="date" name="arrival" aria-label="Arrival date" required>
+                        <input id="arrival" type="date" name="arrival" aria-label="Arrival date" required>
                     </label>
                     <label>
                         <span>Departure</span>
-                        <input type="date" name="departure" aria-label="Departure date" required>
+                        <input id="departure" type="date" name="departure" aria-label="Departure date" required>
                     </label>
                     <label>
                         <span>Guests</span>
-                        <select name="guests" aria-label="Number of guests">
-                            <option>2 Guests</option>
-                            <option>1 Guest</option>
-                            <option>3 Guests</option>
-                            <option>4 Guests</option>
+                        <select id="guests" name="guests" aria-label="Number of guests">
+                            <option value="2">2 Guests</option>
+                            <option value="1">1 Guest</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
                         </select>
                     </label>
                     <button type="submit">Check availability <span aria-hidden="true">→</span></button>
+                    <p class="booking-message" id="booking-message" role="status" aria-live="polite"></p>
                 </form>
             </aside>
+        </section>
+
+        <section class="availability-results section-pad" id="availability-results" aria-labelledby="availability-heading" hidden>
+            <div class="availability-heading">
+                <div>
+                    <p class="eyebrow">Available for your stay</p>
+                    <h2 id="availability-heading">Choose your room.</h2>
+                </div>
+                <div class="availability-summary-wrap">
+                    <a href="#booking">Change dates <span aria-hidden="true">↑</span></a>
+                </div>
+            </div>
+            <div class="availability-grid" id="availability-grid"></div>
         </section>
 
         <section class="stay section-pad" id="stay">
             <div class="stay-image-wrap">
                 <img src="assets/images/Room.png" alt="Warm, light-filled suite overlooking the Mediterranean Sea">
-                <p class="image-note">Suites</p>
             </div>
 
             <div class="stay-content">
@@ -168,16 +181,25 @@
             </div>
 
             <div class="micro-experiences">
-                <div><h3>Hidden coves</h3><p>Private sails and quiet swims along the island's untouched edge.</p></div>
-                <div><h3>Slow mornings</h3><p>Guided walks through old olive groves before the coast wakes.</p></div>
-                <div><h3>Golden hours</h3><p>Aperitifs, vinyl and the last light from our cliffside terrace.</p></div>
+                <div>
+                    <div class="micro-experience-copy">
+                        <h3><img src="assets/images/iconnobg.png" alt="">Hidden coves</h3>
+                        <p>Private sails and quiet swims along the island's untouched edge.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="micro-experience-copy">
+                        <h3><img src="assets/images/iconnobg.png" alt="">Slow mornings</h3>
+                        <p>Guided walks through old olive groves before the coast wakes.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="micro-experience-copy">
+                        <h3><img src="assets/images/iconnobg.png" alt="">Golden hours</h3>
+                        <p>Aperitifs, vinyl and the last light from our cliffside terrace.</p>
+                    </div>
+                </div>
             </div>
-        </section>
-
-        <section class="pause section-pad" aria-label="Sunrise philosophy">
-            <div class="pause-orbit" aria-hidden="true"><span></span></div>
-            <blockquote>“Luxury is not more.<br>It is <em>space, light</em> and time.”</blockquote>
-            <p>The Sunrise Philosophy</p>
         </section>
 
         <section class="place" aria-labelledby="place-heading">
@@ -186,7 +208,6 @@
                 <p class="eyebrow eyebrow-light">The island</p>
                 <h2 id="place-heading">Close to everything.<br>Far from ordinary.</h2>
                 <p>Set above a quiet Aegean cove, Sunrise is twenty minutes from the old harbour and a world away from the noise.</p>
-                <a class="text-link text-link-light" href="#contact">Find your way here <span aria-hidden="true">→</span></a>
             </div>
         </section>
 
@@ -205,8 +226,7 @@
     <footer>
         <div class="footer-top">
             <a class="brand brand-footer" href="#home">
-                <span class="brand-name">Sunrise</span>
-                <span class="brand-tagline">Mediterranean Retreat</span>
+                <img class="brand-footer-logo" src="assets/images/logo-nobg.png" alt="Sunrise Hotel">
             </a>
             <div class="newsletter">
                 <p>Letters from the coast</p>
@@ -225,10 +245,10 @@
         </div>
 
         <div class="footer-bottom">
-            <p>© 2026 Sunrise. University project concept.</p>
-            <p>Designed with HTML &amp; CSS only.</p>
+            <p>© 2026 Sunrise.</p>
             <a href="#home">Back to top ↑</a>
         </div>
     </footer>
+    <script src="availability.js" defer></script>
 </body>
 </html>
